@@ -1,10 +1,26 @@
-// Create a function that reverses a word
+"use strict";
 
+// Create a function that reverses a word
+let x = "yo!"
+function reverseWord(word){
+    let wordArr = [];
+    for (let i = word.length-1; i>0; i--){
+      wordArr.push(word[i]);
+    }
+    return wordArr.join('');
+}
 // Create a function that takes an array of words and returns a new array of the
  // words with each word reversed.
-
+function reverseWordArray(words){
+    return words.map(reverseWord);
+}
 // Create a function that returns a random word from an array
+function randomword(words){
+    return words [Math.floor(Math.random() * words.length)];
+}
 
+const words =["strawberry", "stitch","indecipherable", "donut"];
+const reverseWords = reverseWordArray(words);
 // Create an array of words and save it to a variable. Using your functions create
 // a second array of reversed words.
 
